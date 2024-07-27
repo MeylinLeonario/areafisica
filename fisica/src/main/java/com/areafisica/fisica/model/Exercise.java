@@ -10,7 +10,7 @@ public class Exercise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private Tipo tipo;
+    private String tipo;
 
     public Exercise() {
     }
@@ -23,11 +23,11 @@ public class Exercise {
         this.id = id;
     }
 
-    public Tipo getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(Tipo tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 }
