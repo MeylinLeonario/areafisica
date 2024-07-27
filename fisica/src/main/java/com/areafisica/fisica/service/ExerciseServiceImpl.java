@@ -1,4 +1,20 @@
 package com.areafisica.fisica.service;
 
-public class ExerciseServiceImpl {
+import com.areafisica.fisica.model.Exercise;
+import com.areafisica.fisica.repository.ExerciseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+@Repository
+@Service //I've no idea what this does, but it's supposed to be important
+public class ExerciseServiceImpl implements ExerciseService{
+
+    @Autowired
+    private ExerciseRepository exerciseRepository;
+
+    @Override
+    public Exercise saveExercise(Exercise exercise) {
+        return exerciseRepository.save(exercise);
+    }
 }
